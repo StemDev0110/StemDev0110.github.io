@@ -1,0 +1,190 @@
+.repo-box {
+  position: absolute;
+  top: 40%;
+  left: 96%;
+  transform: translate(-50%, -50%);
+  height: 70%;
+  max-height: 82%;
+  margin-left: -10%;
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-bottom: 20px;
+  z-index: 2;
+  width: 25%;
+  overflow: hidden; /* Agregado: ocultar el desbordamiento */
+}
+.statsrepos {
+  font-family: minecraft, sans-serif;
+  color: white;
+}
+.repo-list {
+  max-height: 100%;
+  overflow-y: auto; /* Agregado: agregar barra de desplazamiento vertical si es necesario */
+  padding-right: 10px; /* Agregado: agregar espacio para la barra de desplazamiento */
+}
+
+/* Personalización de la barra de desplazamiento */
+.repo-list::-webkit-scrollbar {
+  width: 6px; /* Ancho de la barra */
+  background-color: transparent; /* Fondo transparente */
+}
+
+.repo-list::-webkit-scrollbar-thumb {
+  background-color: lightgray; /* Color gris */
+  border-radius: 2px; /* Curvas */
+}
+
+.repo-list::-webkit-scrollbar-thumb:hover {
+  background-color: darkgray; /* Color gris oscuro al pasar el cursor */
+}
+
+.repo-list::-webkit-scrollbar-thumb:active {
+  background-color: gray; /* Color gris al hacer clic */
+}
+
+.repo-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  
+  color: white;
+}
+
+.repo-container:hover {
+  background-color: rgb(12, 12, 12);
+}
+
+.repo-image {
+  width: 50px;
+  height: 50px;
+  background-size: cover;
+  background-position: center;
+  margin-right: 10px;
+}
+
+.repo-info {
+  flex: 1;
+  font-family: arcade, sans-serif;
+}
+
+.repo-info h3 {
+  margin: 0;
+  font-size: 16px;
+  font-family: Sorty ,sans-serif;
+}
+
+.repo-info p {
+  margin: 0;
+  font-size: 14px;
+  color: gray;
+}
+
+.repo-info a {
+  color: rgba(0, 255, 115, 0.534);
+  text-decoration: none;
+}
+.yt-box {
+    position: absolute;
+    top: 40%;
+    left: 96%;
+    transform: translate(-50%, -50%);
+    height: 70%;
+    max-height: 82%;
+    margin-left: -10%;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-bottom: 20px;
+    z-index: 2;
+    width: 25%;
+    overflow: auto; /* Agregado: ocultar el desbordamiento */
+  }
+
+  .yt-box::-webkit-scrollbar {
+    width: 6px; /* Ancho de la barra */
+    background-color: transparent; /* Fondo transparente */
+  }
+  
+  .yt-box::-webkit-scrollbar-thumb {
+    background-color: lightgray; /* Color gris */
+    border-radius: 2px; /* Curvas */
+  }
+  
+  .yt-box::-webkit-scrollbar-thumb:hover {
+    background-color: darkgray; /* Color gris oscuro al pasar el cursor */
+  }
+  
+  .yt-box::-webkit-scrollbar-thumb:active {
+    background-color: gray; /* Color gris al hacer clic */
+  }
+  
+  .video-list {
+    max-height: 100%;
+    overflow-y: auto; /* Agregado: agregar barra de desplazamiento vertical si es necesario */
+    padding-right: 10px; /* Agregado: agregar espacio para la barra de desplazamiento */
+  }
+  
+  .video-list::-webkit-scrollbar {
+    width: 6px; /* Ancho de la barra */
+    background-color: transparent; /* Fondo transparente */
+  }
+  
+  .video-list::-webkit-scrollbar-thumb {
+    background-color: lightgray; /* Color gris */
+    border-radius: 2px; /* Curvas */
+  }
+  
+  .video-list::-webkit-scrollbar-thumb:hover {
+    background-color: darkgray; /* Color gris oscuro al pasar el cursor */
+  }
+  
+  .video-list::-webkit-scrollbar-thumb:active {
+    background-color: gray; /* Color gris al hacer clic */
+  }
+  
+  .video-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    color: white;
+  }
+  
+  .video-container:hover {
+    background-color: rgb(12, 12, 12);
+  }
+  
+  .video-image {
+    width: 120px;
+    height: 90px;
+    background-size: cover;
+    background-position: center;
+    margin-right: 10px;
+  }
+  
+  .video-info {
+    flex: 1;
+    font-family: Arial, sans-serif;
+  }
+  
+  .video-info h3 {
+    margin: 0;
+    font-size: 16px;
+  }
+  
+  .video-info p {
+    margin: 0;
+    font-size: 14px;
+    color: gray;
+  }
+  
+  .video-info a {
+    color: rgba(255, 0, 0, 0.8);
+    text-decoration: none;
+  }
