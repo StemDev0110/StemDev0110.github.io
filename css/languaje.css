@@ -1,0 +1,29 @@
+.switch {
+    position: relative;
+    width: 68px;
+    height: 30px;
+    background-color: rgb(12, 12, 12);
+    border-radius: 10px;
+    cursor: pointer;
+    overflow: hidden;
+}
+.switch .ball {
+    position: absolute;
+    top: 2px;
+    width: 30px;
+    margin-left: 4px;
+    height: 26px;
+    transition: transform 0.3s ease-in-out;
+    background-image: url("https://cdn-icons-png.flaticon.com/512/1377/1377973.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: translateX(0%);
+    border-radius: 10   px;
+    border: none;
+}
+.switch.on .ball {
+    transform: translateX(100%);
+    background-image: url("https://cdn-icons-png.flaticon.com/512/1377/1377975.png");
+}
+

@@ -1,0 +1,75 @@
+.console-tab {
+    width: 700px;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 230px;
+    background-color: #253d4b;
+}
+
+.console-tab-header {
+    display: flex;
+    align-items: center;
+    background-color: #161c29;
+    padding: 8px;
+}
+
+.console-tab-title {
+    flex-grow: 1;
+    color: #ffffff;
+    font-weight: bold;
+    font-family: minecraft, sans-serif;
+}
+
+.console-tab-button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 6px;
+}
+
+.console-tab-button-close {
+    background-color: #ff5f56;
+}
+
+.console-tab-button-minimize {
+    background-color: #ffbd2e;
+}
+
+.console-tab-button-maximize {
+    background-color: #27c93f;
+}
+
+.console-tab-content {
+    background-color: #253d4b;
+    padding: 10px;
+    color: #ffffff;
+    font-family: 'Courier New', monospace;
+    line-height: 1.2;
+    overflow-x: auto;
+    max-height: 400px;
+    margin: 0;
+}
+
+.console-line {
+    display: none;
+    color: white;
+}
+.input-line {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.input-prefix {
+    color: #b1b1b1;
+    margin-right: 5px;
+}
+
+.input-field {
+    background-color: transparent;
+    border: none;
+    color: #ffffff;
+    outline: none;
+    width: 100%;
+}

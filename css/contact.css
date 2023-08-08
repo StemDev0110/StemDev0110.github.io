@@ -1,0 +1,85 @@
+
+
+  .contact-square {
+    width: 500px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: #222222;
+    margin: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+    top: 17%;
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  form label {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  form input,
+  form textarea {
+    width: 100%;
+    resize: none;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    font-family: k1, sans-serif;
+    cursor: pointer;
+    box-shadow: 5px 5px 0px #338033;
+  }
+
+  form button:active {
+    transform: translateY(5px) translateX(5px);
+    box-shadow: none;
+    background-color: #55a058;
+  }
+
+  .captcha {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .captcha #captcha-text {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 5px;
+    font-family: k1, sans-serif;
+    color: #ccc;
+  }
+
+  .form-group {
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .form-group label {
+    margin-right: 10px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }

@@ -1,0 +1,82 @@
+.timeline {
+    position: relative;
+    width: 2px;
+    background-color: #333;
+    margin: 0 20px;
+    padding-top: 20px; /* Añadir espacio para el círculo inicial */
+    padding-bottom: 20px; /* Añadir espacio para el círculo final */
+}
+
+.timeline::before,
+.timeline::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #333;
+}
+
+.timeline::before {
+    top: 0;
+}
+
+.timeline::after {
+    bottom: 0;
+}
+
+.project-container {
+    position: relative;
+    padding: 20px;
+    width: 200px;
+    font-family: sorty, sans-serif;
+    color: #cccccc;
+    margin-bottom: 20px;
+    border: 2px solid #333;
+    background-color: #464545;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.left {
+    float: left;
+    clear: left;
+}
+
+.right {
+    float: right;
+    clear: right;
+}
+
+.project h2 {
+    margin: 0;
+    font-size: 18px;
+    font-family: minecraft, sans-serif;
+}
+
+.project p {
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+.project .date {
+    display: block;
+    font-size: 12px;
+    font-family: minecraft, sans-serif;
+    margin-top: 5px;
+}
+
+.project button {
+    margin-top: 10px;
+    padding: 8px 12px;
+    font-size: 14px;
+    font-family: k1, sans-serif;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

@@ -17,7 +17,7 @@ function activarYouTube() {
   botonYouTube.classList.add('active');
   botonGitHub.classList.remove('active');
   repoBox.style.display = 'none';
-  ytBox.style.display = 'flex'; // Mostrar yt-box
+  ytBox.style.display = 'flex';
   fetchVideos();
 }
 

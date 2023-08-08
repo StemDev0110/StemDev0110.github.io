@@ -3,7 +3,14 @@
   <title>StemDev</title>
   <link rel="stylesheet" href="./css/github.css">
   <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/languaje.css">
+  <link rel="stylesheet" href="./css/console.css">
+  <link rel="stylesheet" href="./css/timeline.css">
+  <link rel="stylesheet" href="./css/contact.css">
+  <link rel="stylesheet" href="./css/tree.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="icon" href="./images/favicon.png" type="image/png">
+  
 </head>
 <body>
   <div class="contenedor">
@@ -15,51 +22,518 @@
       <div class="texto">StemVirus</div>
       <div class="boton-container">
         <button class="boton" id="boton-principal" onclick="mostrarContenido('principal')">PRINCIPAL</button>
-        <button class="boton" id="boton-apps" onclick="mostrarContenido('apps')">APPS</button>
-        <button class="boton" id="boton-creations" onclick="mostrarContenido('creations')">CREATIONS</button>
-        <button class="boton" id="boton-contact" onclick="mostrarContenido('contact')">CONTACT</button>
-        <button class="boton" id="boton-studio" onclick="mostrarContenido('studio')">STUDIO</button>
+        <button class="boton" id="boton-projects" onclick="mostrarContenido('projects')">PROYECTOS</button>
+        <button class="boton" id="boton-creations" onclick="mostrarContenido('creations')">CREACIONES</button>
+        <button class="boton" id="boton-contact" onclick="mostrarContenido('contact')">CONTACTO</button>
+        <button class="boton" id="boton-studio" onclick="mostrarContenido('studio')">HYPNOSTUDIO</button>
+      </div>
+      <div class="switch" id="switch">
+        <div class="ball"></div>
       </div>
       <div class="imagenes-container">
-        <a href="https://discord.io/stem" target="_blank" class="imagen" style="background-image: url('https://cdn3.iconfinder.com/data/icons/popular-services-brands-vol-2/512/discord-512.png');"></a>
+        <a href="https://discord.gg/fFX7Y9tNQZ" target="_blank" class="imagen" style="background-image: url('https://cdn3.iconfinder.com/data/icons/popular-services-brands-vol-2/512/discord-512.png');"></a>
         <a href="https://www.youtube.com/@stemvirus" target="_blank" class="imagen" style="background-image: url('https://cdn-icons-png.flaticon.com/512/3670/3670163.png');"></a>
         <a href="https://github.com/StemVirus" target="_blank" class="imagen" style="background-image: url('https://static-00.iconduck.com/assets.00/github-icon-2048x1988-jzvzcf2t.png');"></a>
       </div>
     </div>
   </div>
+  <div class="overlay"></div>
+  <div class="modal">
+      <div class="modal-content">
+          <span class="close">&times;</span>
+          <img class="project-image" src="" alt="Project Image">
+          <p class="project-description"></p>
+      </div>
+  </div>
   <div class="cuadrado">
+    <div class="fondo-cuadrado"></div>
     <div id="contenido-principal">
-      <img class="banner" src="./images/banner.png" alt="StemVirus Banner">
-      <p class="textodescriptivo">Contenido para el botón principal.</p>
+      <img class="banner" src="./images/bannerdev.png" alt="StemVirus Banner">
+      <div style="display: flex; justify-content: center; align-items: center;" >
+      <div class="console-tab">
+        <div class="console-tab-header">
+            <div class="console-tab-button console-tab-button-close"></div>
+            <div class="console-tab-button console-tab-button-minimize"></div>
+            <div class="console-tab-button console-tab-button-maximize"></div>
+        </div>
+        <div class="console-tab-content">
+            <table>
+                <tbody>
+                    <tr>
+                        <td><span class="console-line">[10:20:28] [Server thread/INFO]: Starting Neural server on *:25565</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="console-line">[10:20:29] [Server thread/INFO]: Loading Neuralink ...</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="console-line">[10:20:30] [Server thread/INFO]: PreCharging terrain and loading plugins! (137/1000)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="console-line">[10:20:31] [Server thread/INFO]: StemDev version git-MC-1234567 (Implementing API SNAPSHOT)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="console-line">[10:20:32] [Server thread/INFO]: Done (5.123s)! For help, type "help"</span></td>
+                    </tr>
+                    <tr>
+                      <td><span class="console-line cmd-text">[10:20:33] [Server thread/StemDev]: Hola, mundo! :D</p></td>
+                  </tr>
+                </tbody>
+            </table>
+        </div>  
+      </div>
     </div>
-    <div id="contenido-apps" style="display: none;">
+    <div class="titulo" style="padding: 20px;">Quien soy?</div>
+    <div class="textodescriptivo" style="white-space: pre-line;">
+      Hola, mi nombre es StemVirus, apodado StemDev y naci en 2007.
+      Mi gusto por la programacion nace de Minecraft, un juego en el cual puedes hacer muchas cosas, desde programar com CommandBlocks, crear plugins/mods con java y demas, esto desperto mi pasion por la programacion y la creacion de software.
+    </div>
+    <div class="seleccionador" style="padding: 10px;">
+      <div class="titulo" style="padding: 10px;">Mis habilidades</div>
+      <label for="habilidades" style="font-family: arcade, sans-serif; color: white;">Selecciona una habilidad:</label>
+      <select id="habilidades" style="font-family: sorty, sans-serif; font-size: 100%; height: 4%; color: white; background-color: black; border-radius: 5px; border: none;">
+        <option value="general">General</option>
+        <option value="web">Dev - Web</option>
+        <option value="app">Dev - App</option>
+        <option value="games">Dev - Juegos</option>
+        <option value="ai">Dev - IA</option>
+        <option value="musica">Comp - Musica</option>
+        <option value="datascience">Ciencia de Datos</option>
+      </select>
+    </div>
+    <div class="skillscontainer">
+      <div style="display: flex; justify-content: center; align-items: center;" class="skillgrafic">
+        <figure id="skillsgrafic"> 
+        <ul class="tree" style="padding: 20px;">
+          <li><span class="titulo2">Desarrollo WEB</span>
+            <ul>
+                  <li><span><i class="fa-solid fa-server"></i> Backend</span>
+                    <ul>
+                      <li><span><i class="fab fa-node-js"></i> Node.js</span>
+                      <ul>
+                        <li><span><i class="fa-solid fa-atom"></i> Redux</span></li>
+                        <li><span><i class="fas fa-cubes"></i> Express</span></li>
+                        <li><span><i class="fab fa-react"></i> Next.Js</span></li>
+                      </ul></li>
+                      <li><span><i class="fab fa-python"></i> Python</span>
+                      <ul>
+                        <li><span><i class="fa-solid fa-flask"></i> Flask</span></li>
+                      </ul>
+                    </li>
+                      <li><span><i class="fab fa-rust"></i> Rust</span>
+                      <ul>
+                        <li><span><<i class="fa-solid fa-rocket"></i> Rocket</span></li>
+                      </ul></li>
+                    </ul>
+                  </li>
+                  <li><span><i class="fa-solid fa-globe"></i> Frontend</span>
+                    <ul>
+                      <li><span><i class="fa-solid fa-bolt"></i> Vite</span></li>
+                      <li><span><i class="fab fa-html5"></i> HTML5</span></li>
+                      <li><span><i class="fab fa-css3-alt"></i> CSS3</span>
+                      <ul>
+                        
+                        <li><span><i class="fa-brands fa-bootstrap"></i> Boostrap</span></li>
+                        <li><span><i class="fa-solid fa-wind"></i> Tailwind</span></li>
+                        <li><span><i class="fa-brands fa-uikit"></i> UIKit</span></li>
+                      </ul></li>
+                      <li><span><i class="fab fa-js"></i> JavaScript</span>
+                      <ul>
+                        <li><span><i class="fa-brands fa-react"></i> React.js</span></li>
+                        <li><span><i class="fa-brands fa-angular"></i> Angular</span></li>
+                        <li><span><i class="fa-brands fa-vuejs"></i> Vue.js</span></li>
+                      </ul></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        </figure>
+        <div id="skillsgrafic2" style="display: none;" class="skillgrafic2">
+          <figure style="display: flex; justify-content: center; align-items: center; margin: 0%;">
+            <ul class="tree" style="padding: 20px; margin: 0%;">
+              <li><span class="titulo">Desarrollo WEB</span></li>
+            </ul>
+          </figure>
+          <div class="textodescriptivo" style="white-space: pre-line;">Algunas de las aptitudes que poseo son una capacidad organizativa ejemplar, un comportamiento acogedor y accesible, ingenio, una excelente gestión del tiempo y una aptitud para el aprendizaje rápido.
+            Además, poseo otras habilidades igualmente significativas, tales como:
+          </div>
+          <div class="progress-bar-container">
+            <div class="progress-name">Experiencia</div>
+            <div class="progress-bar" data-progress="40" style="background-color: rgb(152, 76, 167);"></div>
+            <div class="progress-dot" style="background-color: rgb(152, 76, 167);"></div>
+            <div class="progress-text" style="color: rgb(152, 76, 167);">0%</div>
+          </div>
+          <div style="display: flex;" class="center">
+            <div style="padding: 15px;">
+              <div class="progress-bar-container">
+                <div class="progress-name">Frontend</div>
+                <div class="progress-bar" data-progress="55" style="background-color: rgb(76, 138, 167);"></div>
+                <div class="progress-dot" style="background-color: rgb(76, 138, 167);"></div>
+                <div class="progress-text" style="color: rgb(76, 138, 167);">0%</div>
+              </div>
+              <div class="progress-bar-container">
+                <div class="progress-name">HTML</div>
+                <div class="progress-bar" data-progress="100" style="background-color: rgb(226, 110, 43);"></div>
+                <div class="progress-dot" style="background-color: rgb(226, 110, 43);"></div>
+                <div class="progress-text" style="color: rgb(226, 110, 43);">0%</div>
+              </div>
+              <div class="progress-bar-container">
+                <div class="progress-name">CSS</div>
+                <div class="progress-bar" data-progress="70" style="background-color: rgb(80, 141, 255);"></div>
+                <div class="progress-dot" style="background-color: rgb(80, 141, 255);"></div>
+                <div class="progress-text" style="color: rgb(80, 141, 255);">0%</div>
+              </div>
+              <div class="progress-bar-container">
+                <div class="progress-name">SVG</div>
+                <div class="progress-bar" data-progress="30" style="background-color: rgb(255, 194, 80);"></div>
+                <div class="progress-dot" style="background-color: rgb(255, 208, 80);"></div>
+                <div class="progress-text" style="color: rgb(255, 179, 80);">0%</div>
+              </div>
+              <div class="progress-bar-container">
+                <div class="progress-name">JavaScript</div>
+                <div class="progress-bar" data-progress="65" style="background-color: rgb(255, 252, 80);"></div>
+                <div class="progress-dot" style="background-color: rgb(255, 208, 80);"></div>
+                <div class="progress-text" style="color: rgb(255, 252, 80);">0%</div>
+              </div>
+              <div class="progress-bar-container">
+                <div class="progress-name">React</div>
+                <div class="progress-bar" data-progress="40" style="background-color: rgb(80, 156, 255);"></div>
+                <div class="progress-dot" style="background-color: rgb(120, 152, 194);"></div>
+                <div class="progress-text" style="color: rgb(170, 198, 235);">0%</div>
+              </div>
+              <div class="progress-bar-container">
+                <div class="progress-name">Angular</div>
+                <div class="progress-bar" data-progress="5" style="background-color: rgb(255, 80, 80);"></div>
+                <div class="progress-dot" style="background-color: rgb(121, 34, 34);"></div>
+                <div class="progress-text" style="color: rgb(238, 38, 38);">0%</div>
+              </div>
+              <div class="progress-bar-container">
+                <div class="progress-name">Vue</div>
+                <div class="progress-bar" data-progress="30" style="background-color: rgb(80, 255, 168);"></div>
+                <div class="progress-dot" style="background-color: rgb(56, 117, 87);"></div>
+                <div class="progress-text" style="color: rgb(45, 126, 108);">0%</div>
+              </div>
+              <div class="progress-bar-container">
+                <div class="progress-name">Vite</div>
+                <div class="progress-bar" data-progress="20" style="background-color: rgb(130, 76, 167);"></div>
+                <div class="progress-dot" style="background-color: rgb(130, 76, 167);"></div>
+                <div class="progress-text" style="color: rgb(255, 252, 80);">0%</div>
+              </div>
+            </div>
+            <div style="padding: 15px;">
+              <div class="progress-bar-container">
+                <div class="progress-name">Backend</div>
+                <div class="progress-bar" data-progress="20" style="background-color: rgb(167, 76, 137);"></div>
+                <div class="progress-dot" style="background-color: rgb(167, 76, 137);"></div>
+                <div class="progress-text" style="color: rgb(167, 76, 137);">0%</div>
+              </div>
+              <div class="progress-bar-container">
+                <div class="progress-name">NodeJs</div>
+                <div class="progress-bar" data-progress="50" style="background-color: rgb(69, 207, 87);"></div>
+                <div class="progress-dot" style="background-color: rgb(52, 124, 61);"></div>
+                <div class="progress-text" style="color: rgb(73, 148, 83);">0%</div>
+              </div>
+              <div class="progress-bar-container">
+                <div class="progress-name">Redux</div>
+                <div class="progress-bar" data-progress="10" style="background-color: rgb(152, 76, 167);"></div>
+                <div class="progress-dot" style="background-color: rgb(156, 76, 167);"></div>
+                <div class="progress-text" style="color: rgb(191, 80, 255);">0%</div>
+              </div>
+              <div class="progress-bar-container">
+                <div class="progress-name">ExpressJs</div>
+                <div class="progress-bar" data-progress="5" style="background-color: rgb(236, 215, 26);"></div>
+                <div class="progress-dot" style="background-color: rgb(243, 229, 35);"></div>
+                <div class="progress-text" style="color: rgb(255, 243, 80);">0%</div>
+              </div>
+              <div class="progress-bar-container">
+                <div class="progress-name">NextJs</div>
+                <div class="progress-bar" data-progress="5" style="background-color: rgb(92, 125, 138);"></div>
+                <div class="progress-dot" style="background-color: rgb(83, 102, 110);"></div>
+                <div class="progress-text" style="color: rgb(151, 179, 197);">0%</div>
+              </div>
+              <div class="progress-bar-container">
+                <div class="progress-name">Rust</div>
+                <div class="progress-bar" data-progress="15" style="background-color: rgb(75, 34, 34);"></div>
+                <div class="progress-dot" style="background-color: rgb(116, 42, 42);"></div>
+                <div class="progress-text" style="color: rgb(131, 25, 25);">0%</div>
+              </div>
+              <div class="progress-bar-container">
+                <div class="progress-name">Rocket</div>
+                <div class="progress-bar" data-progress="7" style="background-color: rgb(112, 16, 16);"></div>
+                <div class="progress-dot" style="background-color: rgb(124, 18, 18);"></div>
+                <div class="progress-text" style="color: rgb(131, 25, 25);">0%</div>
+              </div>
+              <div class="progress-bar-container">
+                <div class="progress-name">Python</div>
+                <div class="progress-bar" data-progress="50" style="background-color: rgb(62, 105, 197);"></div>
+                <div class="progress-dot" style="background-color: rgb(230, 226, 0);"></div>
+                <div class="progress-text" style="color: rgb(246, 255, 115);">0%</div>
+              </div>
+              <div class="progress-bar-container">
+                <div class="progress-name">Flask</div>
+                <div class="progress-bar" data-progress="30" style="background-color: rgb(76, 141, 167);"></div>
+                <div class="progress-dot" style="background-color: rgb(76, 138, 167);"></div>
+                <div class="progress-text" style="color: rgb(80, 185, 255);">0%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <div style="display: flex; justify-content: center; align-items: center; height: 5%;">
+      <button class="skillscontainer-button" id="skillButton" onclick="toggleButton(), mostrarSkills()">Estadisticas</button>
+      <button class="skillscontainer-button" id="skillButton2" style="display:none;" onclick="toggleButton(), mostrarSkills()">Grafico</button>
+    </div>
+    </div>
+    <div class="seleccionador" style="padding: 10px;">
+      <label for="habilidades" style="font-family: sorty, sans-serif; color: white;">Estudio</label>
+      <select id="habilidades" style="font-family: sorty, sans-serif; font-size: 100%; height: 4%; color: white; background-color: black; border-radius: 5px; border: none;">
+        <option value="gnl">General</option>
+        <option value="uni">Universitario</option>
+        <option value="tec">Tecnico</option>
+      </select>
+    </div>
+    <div class="skillscontainer">
+      <figure style="display: flex; justify-content: center; align-items: center; margin: 0%;">
+        <ul class="tree" style="padding: 20px; margin: 0%;">
+          <li><span class="titulo">Secundaria</span></li>
+        </ul>
+      </figure>
+    </div>
+    </div>
+    <div id="contenido-apps" style="display: none;" class="contenido-cuadrado">
       <img class="banner" src="./images/apps.png" alt="StemVirus Banner">
-      <p class="textodescriptivo">Contenido para el botón principal.</p>
     </div>
-    <div id="contenido-creations" style="display: none;">
-      <img class="banner" src="./images/creations.png" alt="StemVirus Banner">
-      <p class="textodescriptivo">Contenido para el botón principal.</p>
+    <div id="contenido-projects" style="display: none;" class="contenido-cuadrado">
+      <img class="banner" src="./images/projects.png" alt="projects">
+      <div class="textodescriptivo" style="white-space: pre-line;">
+        Aquí se pueden apreciar varios de mis proyectos personales, los cuales he desarrollado por diversas razones.
+        Algunos tienen el objetivo de entretener, otros buscan fomentar el aprendizaje, y también hay aquellos creados con fines profesionales para uso cotidiano o para resolver problemas específicos.
+      </div>
+      <ul class="gallery">
+        <li>
+          <div class="project-info">
+            <img src="https://cdn.discordapp.com/attachments/1048275134026358916/1138171448276566056/minecraft_title.png" alt="LauncherCreator">
+            <div class="project-tag">
+              <span class="project-tag-b">App</span>
+            </div>
+            <div class="project-description">Este es un launcher OpenSource, esta diseñado para crear launchers sin programar, edicion script.</div>
+            <button class="show-details">Ver</button>
+          </div>
+        </li>
+        <li>
+          <div class="project-info">
+            <img src="https://cdn.discordapp.com/attachments/1048275134026358916/1133419437870039131/stemlauncher.png" alt="StemLauncher">
+            <div class="project-tag">
+              <span class="project-tag-b">McLauncher</span>
+            </div>
+            <div class="project-description">Este es un launcher OpenSource, esta diseñado para ser usado como base de launchers.</div>
+            <button class="show-details">Ver</button>
+          </div>
+        </li>
+        <li>
+          <div class="project-info">
+            <img src="https://cdn.discordapp.com/attachments/1048275134026358916/1133429498285674587/protonstudiotitle2.png" alt="ProtonStudio">
+            <div class="project-tag">
+              <span class="project-tag-b">Application</span>
+            </div>
+            <div class="project-description">Este es una Aplicacion dedicada a gestion de equipos de trabajo y organizacion para la creacion de proyectos.</div>
+            <button class="show-details">Ver</button>
+          </div>
+        </li>
+        <li>
+          <div class="project-info">
+          <img src="https://media.discordapp.net/attachments/1048275134026358916/1133429497987870830/hypnostudios_title.png" alt="HypnoStudios">
+          <div class="project-tag">
+            <span class="project-tag-b">DiscordBot</span>
+          </div>
+          <div class="project-description">Este es un bot de discord que programe para HypnoStudios y tiene varias funciones, para el cual use NodeJs</div>
+          <button class="show-details">Ver</button>
+          </div>
+        </li>
+        <li>
+          <div class="project-info">
+            <img src="https://cdn.discordapp.com/attachments/1048275134026358916/1133428948206878841/destatitle.png" alt="DestaAI">
+            <div class="project-tag">
+              <span class="project-tag-b">AI</span>
+            </div>
+            <div class="project-description">Esta es una AI customizada con datos unicos, usando el modelo de OpenAi, llegue a crear un bot de discord y una version de escritorio</div>
+            <button class="show-details">Ver</button>
+          </div>
+        </li>
+      </ul>
+      <div class="titulo" style="display: flex; justify-content: center; align-items: center; padding: 10px;">TimeLine</div>
+      <div style="display: flex; justify-content: center; align-items: center;">
+        <div class="timeline project">
+          <div class="project-container left">
+            <h2>LauncherCreator</h2>
+            <p>ProtonStudio, es un proyecto personal, basado en administracion de recursos, personal y trabajo en equipo, en el cual vienen incorporado distintas aplicaciones las cuales sirven para desarrollar aplicaciones grandes y pequeñas, con la capacidad de crear versiones de Proton las cuales permiten tener un manejo de ciertas areas y de los trabajadores.</p>
+            <span class="date">Agosto del 2023</span>
+            <button onclick="window.location.href='enlace_del_proyecto2.html'">Ver</button>
+          </div>
+          <div class="project-container right">
+            <h2>StemLauncher</h2>
+            <p>En este trabajo, encomendado por y para HypnoStudios, cree un bot de discord con funcionalidades unicas, como un Answer and Response, VoiceChat AutoCreated, ServerStatus, YoutubeViewer y demas cosas.</p>
+            <span class="date">Julio del 2023</span>
+            <button onclick="window.location.href='enlace_del_proyecto2.html'">Ver</button>
+          </div>
+          <div class="project-container left">
+            <h2>ProtonStudio</h2>
+            <p>ProtonStudio, es un proyecto personal, basado en administracion de recursos, personal y trabajo en equipo, en el cual vienen incorporado distintas aplicaciones las cuales sirven para desarrollar aplicaciones grandes y pequeñas, con la capacidad de crear versiones de Proton las cuales permiten tener un manejo de ciertas areas y de los trabajadores.</p>
+            <span class="date">Junio del 2023</span>
+            <button onclick="window.location.href='enlace_del_proyecto2.html'">Ver</button>
+          </div>
+          <div class="project-container right">
+            <h2>HypnoStudios BOT</h2>
+            <p>En este trabajo, encomendado por y para HypnoStudios, cree un bot de discord con funcionalidades unicas, como un Answer and Response, VoiceChat AutoCreated, ServerStatus, YoutubeViewer y demas cosas.</p>
+            <span class="date">Febrero del 2023</span>
+            <button onclick="window.location.href='enlace_del_proyecto2.html'">Ver</button>
+          </div>
+          <div class="project-container left">
+              <h2>Desta AI</h2>
+              <p>En este mini proyecto, use la api de OpenAI, para crear un bot el cual sea capas de hablar mediante contexto y tambien usando factores de reconocimiento, poder identificar con que persona habla en el chat.</p>
+              <span class="date">Diciembre del 2022</span>
+              <button onclick="window.location.href='project_desta.html'">Ver</button>
+          </div>
+        <!-- Agrega más proyectos aquí -->
+        </div>
+      </div>
     </div>
-    <div id="contenido-contact" style="display: none;">
+    <div id="contenido-creations" style="display: none;" class="contenido-cuadrado">
+      <img class="banner" src="./images/creations.png" alt="creations">
+      <div class="textodescriptivo" style="white-space: pre-line;">
+        Aquí se pueden apreciar varios de mis creaciones adquiridos atraves de comisiones, los cuales he desarrollado solo o en equipo.
+        Algunos tienen el objetivo de entretener, para resolver problemas específicos, o para cierto sotware o persona que necesita de este software.
+      </div>
+      <ul class="gallery">
+        <li>
+          <div class="project-info">
+            <img src="https://cdn.discordapp.com/attachments/1048275134026358916/1133442479719469106/dinastycraft.png" alt="DinastyCraft">
+            <div class="project-tag">
+              <span class="project-tag-b">McServer</span>
+            </div>
+            <div class="project-description">Este server dedicado Geyser fue un pedido en el cual se solicitaba crear un mapa dinamico con la adiccion de poder ver "Paises", tambien otras mecanicas con este y un resourcepack funcional para java y bedrock agregando items nuevos.</div>
+            <button class="show-details">Ver</button>
+          </div>
+        </li>
+        <li>
+          <div class="project-info">
+          <img src="https://cdn.discordapp.com/attachments/1048275134026358916/1133450497202851920/image.png" alt="GochoCastle">
+          <div class="project-tag">
+            <span class="project-tag-b">Studio</span>
+          </div>
+          <div class="project-description">Este es un trabajo el cual fue divididas varias tareas, como animacion 3d, creacion de Resourcepacks, Manejo de Network y demas.</div>
+          <button class="show-details">Ver</button>
+          </div>
+        </li>
+        <li>
+          <div class="project-info">
+          <img src="https://github.com/Hypnos0110/PatoGea-Launcher/blob/main/src/assets/images/logo.png?raw=true" alt="PatoGea4">
+          <div class="project-tag">
+            <span class="project-tag-b">McLauncher</span>
+          </div>
+          <div class="project-description">Este es un launcher privado, solicitado por Rafamape0110, este launcher esta diseñado para un server especifico y solo soporta una version especial.</div>
+          <button class="show-details">Ver</button>
+          </div>
+        </li>
+      </ul>
+      <div class="titulo" style="display: flex; justify-content: center; align-items: center; padding: 10px;">TimeLine</div>
+      <div style="display: flex; justify-content: center; align-items: center;">
+        <div class="timeline project">
+          <div class="project-container left">
+            <h2>DinastyCraft</h2>
+            <p>En este trabajo me contactaron para crear un server del mapa del mundo en minecraft, el cual tenga mods para java y bedrock, para hacer esto use plugins y geyser, tambien cree texturas custom y cree sistemas de mapa con el Dynmap para visualizar paises.</p>
+            <span class="date">Precio: 30$</span>
+            <span class="date">Julio del 2023</span>
+            <button onclick="window.location.href='enlace_del_proyecto2.html'">Ver</button>
+          </div>
+          <div class="project-container right">
+            <h2>GochoCastle</h2>
+            <p>En este trabajo, encomendado por Gocho, cree un server de mods simple, el cual despues se expandio a una network, tambien le cree un launcher custom y demas, participe en este trabajo siendo trabajador y cordinador de HypnoStudios, se le llegaron a crear animaciones 3d, texturas y modelos, configuraciones de plugins, optimizacion.</p>
+            <span class="date">Precio: 160$</span>
+            <span class="date">Abril del 2023</span>
+            <button onclick="window.location.href='enlace_del_proyecto2.html'">Ver</button>
+          </div>
+          <div class="project-container left">
+            <h2>PatoGea 4 Launcher</h2>
+            <p>En este mini proyecto, cree un launcher de minecraft apartir de la plantilla de Uzuni, este launcher era solo Premiun, para un server de mods especifico.</p>
+            <span class="date">Precio: 8€</span>
+            <span class="date">Febrero del 2023</span>
+            <button onclick="window.location.href='project_desta.html'">Ver</button>
+          </div>
+        <!-- Agrega más proyectos aquí -->
+        </div>
+      </div>
+    </div>
+    <div id="contenido-contact" style="display: none;" class="contenido-cuadrado">
       <img class="banner" src="./images/contact.png" alt="StemVirus Banner">
-      <p class="textodescriptivo">Contenido para el botón principal.</p>
+      <div style="display: flex; justify-content: center; align-items: center;">
+      <div class="contact-square">
+        <form id="contact-form">
+          <div class="form-group">
+            <label for="name" class="titulo" style="padding: 10px;">Nombre:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email" class="titulo" style="padding: 10px;">Email:</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+    
+          <label for="message" class="titulo">Mensaje</label>
+          <textarea id="message" name="message" rows="2" required></textarea>
+    
+          <div class="captcha">
+            <label for="captcha" class="titulo">Ingresa el texto que aparece a continuación</label>
+            <input type="text" id="captcha" name="captcha" required>
+            <span id="captcha-text"></span>
+          </div>
+    
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
     </div>
-    <div id="contenido-studio" style="display: none;">
+    <div style="display: flex; justify-content: center; align-items: center;">
+    <div class="redes" style="position: absolute; bottom: 3%;">
+      <a href="https://twitter.com/StemVirus" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+      <a href="" target="_blank"><i class="fab fa-Instagram"></i> Instagram</a>
+      <a href="" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+    </div>
+    </div>
+    </div>
+    <div id="contenido-studio" style="display: none;" class="contenido-cuadrado">
       <img class="banner" src="./images/hypnostudios.png" alt="StemVirus Banner">
-      <p class="textodescriptivo">Contenido para el botón principal.</p>
+      <p class="titulo2">Presentacion</p>
+      <div class="textodescriptivo2">
+        ¡Hola! Somos HypnoStudios, una empresa enfocada en el desarrollo de una amplia variedad
+        de productos, incluyendo Videojuegos, Software, Animaciones, Modelaje, Redes Neuronales y Hardware.
+
+        Nuestra principal pasión es crear contenido innovador, como mods, plugins y otros
+        complementos para Videojuegos. Si bien comenzamos como un estudio especializado en
+        contenido para Minecraft, hemos crecido y ahora abarcamos un espectro más amplio de proyectos.
+
+        En HypnoStudios, nos esforzamos por mantenernos a la vanguardia de la creatividad y la tecnología.
+        Nuestro equipo altamente capacitado y apasionado está comprometido en ofrecer soluciones creativas y funcionales para diferentes industrias.
+        
+        Nos enorgullecemos de mantenernos siempre abiertos a nuevos desafíos y oportunidades
+        para expandir nuestras habilidades y conocimientos. Nuestro objetivo es seguir creciendo
+        como estudio, manteniendo la calidad y el profesionalismo en cada uno de nuestros proyectos.
+
+        ¡Gracias por considerarnos para tus necesidades de desarrollo! Siempre estamos dispuestos a llevar tus ideas al siguiente nivel.
+      </div>
+      <div style="display: flex; justify-content: center; align-items: center;">
+      <button onclick="window.location.href='http://hypnostudios.rf.gd'" class="botonstudio">Ver más</button>
+    </div>
     </div>
   </div>
   <div class="repo-box">
     <div class="repo-list"></div>
   </div>
   <div class="yt-box">
-    <img class="profile" src="./images/icon.png" alt="Profile">
-    <p class="titulo2">StemVirus#0568</p>
-    <p class="textodescriptivo">¡Hola! Soy un programador experimentado con un enfoque constante en el crecimiento profesional y la adquisición de nuevos conocimientos. Me especializo en el desarrollo de backend y tengo experiencia en una amplia gama de lenguajes y tecnologías utilizadas en este campo, incluyendo inteligencia artificial y redes neuronales.</p>
-    <p class="textodescriptivo">Mi experiencia se centra principalmente en la ingeniería de software backend, donde he trabajado en diversos proyectos utilizando diferentes lenguajes de programación y frameworks. He adquirido un profundo conocimiento en inteligencia artificial y redes neuronales aplicadas a soluciones de backend, lo cual me permite diseñar y desarrollar sistemas avanzados basados en estas tecnologías.</p>
-    <p class="textodescriptivo">He utilizado lenguajes como Java, C++, Rust, JavaScript, HTML y CSS en mis proyectos de backend, y he aplicado conceptos de inteligencia artificial y redes neuronales para resolver problemas complejos y brindar soluciones innovadoras. Además, tengo experiencia en el desarrollo web backend utilizando frameworks como Electron y React.</p>    
-    <p class="textodescriptivo">Mi enfoque actual se encuentra en el desarrollo de soluciones backend, donde me especializo en la implementación de servicios eficientes y escalables. Estoy comprometido con la calidad y el rendimiento de mis proyectos, y siempre busco brindar soluciones robustas y seguras.</p>
-    <p class="textodescriptivo">Si estás buscando un programador con experiencia en desarrollo backend, conocimientos en inteligencia artificial y redes neuronales, y comprometido con la calidad de los proyectos, estaré encantado de colaborar contigo. No dudes en contactarme para discutir tus proyectos y cómo podemos trabajar juntos para alcanzar tus objetivos.</p>
+    <img class="discord" src="https://lanyard.cnrad.dev/api/742060351285362789" alt="Profile">
+    <p class="textodescriptivo cmd-text">¡Hola! Soy un programador experimentado con un enfoque constante en el crecimiento profesional y la adquisición de nuevos conocimientos. Me especializo en el desarrollo de backend y tengo experiencia en una amplia gama de lenguajes y tecnologías utilizadas en este campo, incluyendo inteligencia artificial y redes neuronales.</p>
+    <p class="textodescriptivo cmd-text">Mi experiencia se centra principalmente en la ingeniería de software backend, donde he trabajado en diversos proyectos utilizando diferentes lenguajes de programación y frameworks. He adquirido un profundo conocimiento en inteligencia artificial y redes neuronales aplicadas a soluciones de backend, lo cual me permite diseñar y desarrollar sistemas avanzados basados en estas tecnologías.</p>
+    <p class="textodescriptivo cmd-text">He utilizado lenguajes como Java, C++, Rust, JavaScript, HTML y CSS en mis proyectos de backend, y he aplicado conceptos de inteligencia artificial y redes neuronales para resolver problemas complejos y brindar soluciones innovadoras. Además, tengo experiencia en el desarrollo web backend utilizando frameworks como Electron y React.</p>    
+    <p class="textodescriptivo cmd-text">Mi enfoque actual se encuentra en el desarrollo de soluciones backend, donde me especializo en la implementación de servicios eficientes y escalables. Estoy comprometido con la calidad y el rendimiento de mis proyectos, y siempre busco brindar soluciones robustas y seguras.</p>
+    <p class="textodescriptivo cmd-text">Si estás buscando un programador con experiencia en desarrollo backend, conocimientos en inteligencia artificial y redes neuronales, y comprometido con la calidad de los proyectos, estaré encantado de colaborar contigo. No dudes en contactarme para discutir tus proyectos y cómo podemos trabajar juntos para alcanzar tus objetivos.</p>
   </div>
   <div class="notif">    
     <div style="display: flex;">
@@ -67,7 +541,12 @@
       <button class="notif-boton" id="boton-youtube">Sobre mí</button>
     </div>
   </div>
+  <script src="./js/cmd.js"></script>
   <script src="./js/showContent.js"></script>
   <script src="./js/github.js"></script>
+  <script src="./js/languaje.js"></script>
+  <script src="./js/contact.js"></script>
+  <script src="./js/progressbar.js"></script>
+  <script src="./js/galery.js"></script>
 </body>
 </html>

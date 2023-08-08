@@ -50,12 +50,11 @@
   display: flex;
   align-items: center;
   margin-bottom: 15px;
-  
   color: white;
 }
 
 .repo-container:hover {
-  background-color: rgb(12, 12, 12);
+  background-color: rgb(12, 12, 12); 
 }
 
 .repo-image {
@@ -73,8 +72,8 @@
 
 .repo-info h3 {
   margin: 0;
-  font-size: 16px;
-  font-family: Sorty ,sans-serif;
+  font-size: 15px;
+  font-family: k1 ,sans-serif;
 }
 
 .repo-info p {
@@ -188,3 +187,28 @@
     color: rgba(255, 0, 0, 0.8);
     text-decoration: none;
   }
+
+  .cmd-text {
+    position: relative;
+    white-space: pre-line;
+  }
+  .text2 {
+    white-space: pre-line;
+  }
+  
+  .cmd-cursor {
+    display: inline-block;
+    width: 2px;
+    height: 1em;
+    background-color: white;
+    animation: cursor-blink 0.7s infinite;
+  }
+  
+  @keyframes cursor-blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+  
+  
+  
+  
