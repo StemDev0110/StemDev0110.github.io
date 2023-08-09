@@ -13,7 +13,6 @@ function generateCaptchaText() {
   return captchaText;
 }
 
-// Función para descifrar un valor en base64
 function decodeBase64(value) {
   try {
     const decodedValue = atob(value);
@@ -40,7 +39,7 @@ contactForm.addEventListener('submit', async (event) => {
   const email = formData.get('email');
   const message = formData.get('message');
   const userCaptchaInput = formData.get('captcha');
-  const encodedWebhook = 'aHR0cHM6Ly9kaXNjb3JkLmNvbS9hcGkvd2ViaG9va3MvMTEzODQ4OTE4Mjc4OTA2MjgwOC9sUXQxaWdwc29Rdlo1YUx5NEM4UEpRZUR0eWdzTHkyelFfZHN5T2lGdEltcW00cU1FSFJITmpOaWtXQUxhSi1wNnNqQg=='; // Reemplaza con el enlace cifrado
+  const encodedWebhook = 'aHR0cHM6Ly9kaXNjb3JkLmNvbS9hcGkvd2ViaG9va3MvMTEzODgwMTc4NTk4MTYzMjYyMy9WSTVCY3J5VHF2TklQeE9QbWtTYVJ1aWZBbFdXWDljMXJVNWtEVnZJQ2ZRNW5aOXZIOW45bk12aEZLZkRMOW43UVcxcA==';
 
   // Verificar CAPTCHA
   if (userCaptchaInput !== expectedCaptchaText) {
@@ -57,10 +56,8 @@ contactForm.addEventListener('submit', async (event) => {
     return;
   }
 
-  // Descifrar enlace de webhook
   const decodedWebhook = decodeBase64(encodedWebhook);
 
-  // Enviar mensaje utilizando el webhook de Discord
   const webhookData = {
     content: `**Nuevo mensaje de contacto:**\nNombre: ${name}\nCorreo electrónico: ${email}\nMensaje: ${message}`
   };
